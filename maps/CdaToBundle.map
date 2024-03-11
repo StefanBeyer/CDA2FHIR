@@ -16,8 +16,10 @@ conceptmap "cm-v3-administrative-gender" {
   prefix s = "http://terminology.hl7.org/ValueSet/v3-AdministrativeGender"
   prefix t = "http://hl7.org/fhir/ValueSet/administrative-gender"
 
-  s:M == t:male
-  s:F == t:female
+  s:"F" == t: "female"
+  s:"M" == t:"male"
+  s:"UN" == t: "other"
+  s:"UNK" == t: "unknown" 
 }
 
 // TODO review mapping
@@ -29,6 +31,7 @@ conceptmap "ELGAAdministrativeGenderFHIRGender" {
   s:"F" == t: "female"
   s:"M" == t:"male"
   s:"UN" == t: "other"
+  s:"UNK" == t: "unknown" 
 }
 
 conceptmap "act-status-2-observation-status" {
